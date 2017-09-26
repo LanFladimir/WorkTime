@@ -1,18 +1,10 @@
 package com.fladimir.worktime.pagers;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.os.PowerManager;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.text.format.DateFormat;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.fladimir.worktime.MainActivity;
 import com.fladimir.worktime.R;
 import com.fladimir.worktime.base.BaseFragment;
 
@@ -66,9 +58,9 @@ public class ClockFragment extends BaseFragment {
      */
     private static String[] getCurrent() throws NumberFormatException {
         long current = System.currentTimeMillis();
-        String date = (String) DateFormat.format(":mm:ss", current);
+        String date = (String) DateFormat.format("HH:mm:ss", current);
         String[] dateS = date.split(":");
-        Log.e("当前时间", dateS[0] + ":" + dateS[1] + ":" + dateS[2]);
+        //Log.e("当前时间", dateS[0] + ":" + dateS[1] + ":" + dateS[2]);
         return new String[]{dateS[0], dateS[1]};
     }
 

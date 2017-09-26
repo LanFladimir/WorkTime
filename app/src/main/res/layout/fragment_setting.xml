@@ -2,13 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:animateLayoutChanges="true"
               android:background="@color/black"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:padding="20dp">
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/setting_notify"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="100dp"
+        android:checked="true"
+        android:text="@string/notify"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/setting_shock"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/shock"
+        android:textColor="@color/white"
+        android:textSize="14sp"/>
+
+    <LinearLayout
+        android:id="@+id/setting_tomato"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tomato"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/setting_tomato_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_tomato"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Setting"
-        android:textColor="@color/white"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:text="Work Time\nV_1.0.0"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>
 </LinearLayout>

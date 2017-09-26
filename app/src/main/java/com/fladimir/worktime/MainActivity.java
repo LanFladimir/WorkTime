@@ -1,11 +1,9 @@
 package com.fladimir.worktime;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.TableLayout;
 
 import com.fladimir.worktime.base.BaseFragmentAdapter;
 import com.fladimir.worktime.pagers.ClockFragment;
@@ -23,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ViewPager mViewPager;
 
+    private DbHelper mDbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
         mFragments.add(mSettingFragment);
         mViewPager.setAdapter(new BaseFragmentAdapter(getSupportFragmentManager(), mFragments));
         mViewPager.setOffscreenPageLimit(4);
+        mViewPager.setCurrentItem(1);
+
+        mDbHelper = new DbHelper(this);
+        //mDbHelper.rawQuery("")
     }
 
 

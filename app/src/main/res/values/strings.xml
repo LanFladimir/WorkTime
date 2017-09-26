@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WorkTime</string>
+    <string name="tomato">番茄时间</string>
+    <string name="default_tomato">25Min</string>
+    <string name="notify">Notification</string>
+    <string name="shock">Shock</string>
 </resources>
