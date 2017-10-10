@@ -4,4 +4,5 @@
     <string name="default_tomato">25Min</string>
     <string name="notify">Notification</string>
     <string name="shock">Shock</string>
+    <string name="keep_screen">Keep Screen</string>
 </resources>

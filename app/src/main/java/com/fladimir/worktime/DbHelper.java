@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 /**
  * Created by ScDz on 2017/9/26.
- * ClassNote:
+ * ClassNote:DbHelper
  */
 
 public class DbHelper extends SQLiteOpenHelper {
@@ -17,7 +17,8 @@ public class DbHelper extends SQLiteOpenHelper {
     private static final String TABLE_TOMATO = "tomato";
     private static final String CREAT_TABLE_CONFIG = "create TABLE IF NOT EXISTS " + TABLE_CONFIG +
             "(_id integer primary key autoincrement, notify boolean default true," +
-            " shock boolean default false, time int default 20  )";
+            " shock boolean default false, keepscreen boolean default true, " +
+            " time int default 20  )";
     private static final String CREAT_TABLE_TOMATO = "create TABLE IF NOT EXISTS " + TABLE_TOMATO +
             "(_id integer primary key autoincrement, date Date, time text)";
     private SQLiteDatabase db;

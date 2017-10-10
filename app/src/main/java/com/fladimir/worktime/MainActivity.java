@@ -42,10 +42,12 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setCurrentItem(1);
 
         mDbHelper = new DbHelper(this);
-        //mDbHelper.rawQuery("")
     }
 
 
+    /**
+     * disable backpress
+     */
     @Override
     public void onBackPressed() {
     }

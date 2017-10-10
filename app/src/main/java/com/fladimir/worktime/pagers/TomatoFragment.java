@@ -1,6 +1,5 @@
 package com.fladimir.worktime.pagers;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,9 +33,11 @@ public class TomatoFragment extends BaseFragment implements View.OnClickListener
                 if (status == 1) {
                     mWorkTime--;
                     getActivity().runOnUiThread(() -> {
-                        if (mWorkTime == 0)
-                            Toast.makeText(mContex, "", Toast.LENGTH_LONG).show();
-                        else
+                        if (mWorkTime == 0) {
+                            Toast.makeText(mContex, "Time is Coming!", Toast.LENGTH_LONG).show();
+                            status = 0;
+                            mWorkTime = 20 * 60;
+                        } else
                             setText(mWorkTime);
                     });
                 }
